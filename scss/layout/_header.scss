@@ -1,0 +1,18 @@
+    .logo {
+        width: $logow;
+        height: $logoh;
+    }
+
+    .navbar {
+        background-color: $bg-titulos;
+        }
+
+        .nav-link {
+        font-size: $text;
+        font-family: 'roboto', sans-serif;
+        color: black;
+        margin-left: 2rem;
+        &:hover {
+            color: white;
+        }
+    }
