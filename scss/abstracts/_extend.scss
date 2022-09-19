@@ -1,5 +1,5 @@
 %cards {
-    height: 450px;
+    height: 350px;
     width: 19rem;
     border-radius: 20px;
     box-shadow: $shadow;
@@ -7,9 +7,9 @@
 
 %titulos {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 2rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
     font-family: 'rubik', sans-serif;
     color: black;
     background-color: $bg-titulos;
@@ -17,8 +17,8 @@
 
 %position-objects{
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(5, 2fr);
+    justify-content: space-around;
     text-align: center;
-    justify-items: center;
-    gap: 30px;
+    gap: 40px;
 }

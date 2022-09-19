@@ -1,18 +1,23 @@
     .logo {
         width: $logow;
         height: $logoh;
+
     }
 
     .navbar {
-        background-color: $bg-titulos;
-        }
+        padding-top:0 ;
+        padding-bottom: 0;
+        background-color: #dadada;
+    }
 
-        .nav-link {
+    .nav-link {
         font-size: $text;
         font-family: 'roboto', sans-serif;
         color: black;
-        margin-left: 2rem;
+        margin-left: 1.1rem;
+
         &:hover {
-            color: white;
+            color: rgb(255, 255, 255);
+            display: block;
         }
     }

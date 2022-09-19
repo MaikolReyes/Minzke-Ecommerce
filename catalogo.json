@@ -1,0 +1,183 @@
+[
+    {
+        "name": "Soldadora Lusqtoff",
+        "image": "./img/soldadora.png",
+        "price": 12899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 1,
+        "sku": "sold20"
+    },
+    {
+        "name": "Hidrolavadora Lusqtoff",
+        "image": "./img/hidro.png",
+        "price": 13499.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 2,
+        "sku": "hidro40"
+    },
+    {
+        "name": "Pistola De Calor Lusqtoff",
+        "image": "./img/pistola-calor.png",
+        "price": 9399.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 3,
+        "sku": "pst008"
+    },
+    {
+        "name": "Mascara Para Soldar",
+        "image": "./img/mascara-soldar.png",
+        "price": 10899.00,
+        "stock": 7,
+        "type": "accesorios",
+        "id": 4,
+        "sku": "masc20"
+    },
+    {
+        "name": "Engrampadora Lusqtoff",
+        "image": "./img/neumatica.png",
+        "price": 10899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 5,
+        "sku": "engram006"
+    },
+    {
+        "name": "Sierra Angular Skill",
+        "image": "./img/sierra-skill.png",
+        "price": 18799.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 6,
+        "sku": "sierrskill"
+    },
+    {
+        "name": "Taladro Percutor Lusqtoff",
+        "image": "./img/taladro-percutorlq.png",
+        "price": 17899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 7,
+        "sku": "tll20"
+    },
+    {
+        "name": "Amoladora Angular Skill",
+        "image": "./img/amoladora-skill.png",
+        "price": 19799.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 8,
+        "sku": "amola20"
+    },
+    {
+        "name": "Carro De Carga Stanley",
+        "image": "./img/carrostanley.png",
+        "price": 16899.00,
+        "stock": 7,
+        "type": "accesorios",
+        "id": 9,
+        "sku": "carstanley20"
+    },
+    {
+        "name": "Caladora Bosch",
+        "image": "./img/caladora-bosch.png",
+        "price": 19899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 10,
+        "sku": "cala20"
+    },
+    {
+        "name": "Motosierra Black & Decker",
+        "image": "./img/motosierra.png",
+        "price": 23799.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 11,
+        "sku": "motsierra20"
+    },
+    {
+        "name": "Mascara Para Soldar",
+        "image": "./img/mascara-soldar.png",
+        "price": 10899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 12,
+        "sku": "masc20"
+    },
+    {
+        "name": "Lijadora Orbital Bosch",
+        "image": "./img/lijadora-orbital.png",
+        "price": 26799.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 13,
+        "sku": "ljdo20"
+    },
+    {
+        "name": "Atornillador Bosch",
+        "image": "./img/atornillador-inalambrico.png",
+        "price": 22399.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 14,
+        "sku": "atorbosch20"
+    },
+    {
+        "name": "Sierra lusqtoff",
+        "image": "./img/sierra-circular.png",
+        "price": 21699.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 15,
+        "sku": "sierr20"
+    },
+    {
+        "name": "Soldadora Inverter",
+        "image": "./img/soldadora-inverter.png",
+        "price": 32699.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 16,
+        "sku": "soldinverter20"
+    },
+    {
+        "name": "Caja De Herramientas",
+        "image": "./img/caja-herramientas.png",
+        "price": 38699.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 17,
+        "sku": "cajaherra20"
+    },
+    {
+        "name": "Caja De Herramientas",
+        "image": "./img/caja-herramientas.png",
+        "price": 38699.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 17,
+        "sku": "cajaherra20"
+    },
+    {
+        "name": "Caja De Herramientas",
+        "image": "./img/caja-herramientas.png",
+        "price": 38699.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 17,
+        "sku": "cajaherra20"
+    },
+    {
+        "name": "Caja De Herramientas",
+        "image": "./img/caja-herramientas.png",
+        "price": 38699.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 17,
+        "sku": "cajaherra20"
+    }
+    
+]

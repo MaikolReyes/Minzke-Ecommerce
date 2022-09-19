@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Soldadora Lusqtoff",
+        "image": "./img/soldadora.png",
+        "price": 12899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 1,
+        "sku": "sold20"
+    },
+    {
+        "name": "Hidrolavadora Lusqtoff",
+        "image": "./img/hidro.png",
+        "price": 13499.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 2,
+        "sku": "hidro40"
+    },
+    {
+        "name": "Pistola De Calor Lusqtoff",
+        "image": "./img/pistola-calor.png",
+        "price": 9399.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 3,
+        "sku": "pst008"
+    },
+    {
+        "name": "Mascara Para Soldar",
+        "image": "./img/mascara-soldar.png",
+        "price": 10899.00,
+        "stock": 7,
+        "type": "accesorios",
+        "id": 4,
+        "sku": "masc20"
+    },
+    {
+        "name": "Engrampadora Lusqtoff",
+        "image": "./img/neumatica.png",
+        "price": 10899.00,
+        "stock": 7,
+        "type": "herramientas electricas",
+        "id": 5,
+        "sku": "engram006"
+    }
+]

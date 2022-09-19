@@ -1,15 +1,19 @@
-.card {
+.card-body {
+    text-align: center;
+    justify-content: space-around;
+    background-color: rgb(239, 239, 239);
     @extend %cards;
 
     &:hover {
-        border: white solid 3px;
+        border: rgb(255, 188, 105) solid 3px;
     }
 }
 
-.card-img-top {
-    height: 300px;
-    width: 300px;
+.card-img {
+    height: 200px;
+    width: 200px;
     opacity: 0.9;
+    text-align: center;
 
     &:hover {
         opacity: 1;
@@ -18,18 +22,32 @@
 
 .card-title {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: black;
 }
 
-.card-text {
+.card-price {
     font-family: 'roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .boton {
     font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+
+    &:hover {
+        background-color: rgb(59, 203, 59);
+    }
+}
+
+.card-featured {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.stock-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: black;
 }
