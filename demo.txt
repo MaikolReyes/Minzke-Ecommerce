@@ -1,87 +1,3 @@
-const lista = document.querySelector('#listado')
-const listaDestacados = document.querySelector('#listadoDestacados')
-
-async function fetchProductCatalog() {
-  try {
-    const response = await fetch('catalogo.json', {
-      method: 'GET'
-    });
-    const products = await response.json();
-    return products;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-async function renderFeaturedProducts() {
-  const products = await fetchProductCatalog();
-
-  products.slice(0, 5).forEach((productosDestacados) => {
-
-    const li = document.createElement('li')
-
-    li.innerHTML = `
-                  <div class="card-body">
-                      <img class="card-img" src="${productosDestacados.image}">
-                      <h5 class="card-title">${productosDestacados.name}</h5>
-                      <p class="card-price">$${productosDestacados.price}</p>
-                      <p class="stock-text">Disponibles: <span>${productosDestacados.stock} </span></p>
-                      <button id="${productosDestacados.id}" class="btn btn-dark mx-0 addToCart"><i class="fa fa-shopping-cart"> </i>Agregar Al Carrito</button>
-                      </div>
-      `
-    listaDestacados.append(li)
-  })
-}
-
-async function renderAllProducts() {
-  const products = await fetchProductCatalog();
-
-  products.forEach((products) => {
-
-    const li = document.createElement('li')
-
-    li.innerHTML = `
-                  <div class="card-body">
-                      <img class="card-img" src="${products.image}">
-                      <h5 class="card-title">${products.name}</h5>
-                      <p class="card-price">$${products.price}</p>
-                      <p class="stock-text">Disponibles: <span>${products.stock} </span></p>
-                      <button id= "${products.id}" class="item-button btn btn-dark addToCart"><i class="fa fa-shopping-cart"> </i>Agregar Al Carrito</button>
-                  </div>
-      `
-    lista.append(li)
-  })
-}
-
-renderFeaturedProducts();
-renderAllProducts();
-
-// CartShopping start
-
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
-addToShoppingCartButtons.forEach((addToCartButton) => {
-  addToCartButton.addEventListener('click', addToCartClicked);
-});
-
-const comprarButton = document.querySelector('.comprarButton');
-comprarButton.addEventListener('click', comprarButtonClicked);
-
-const shoppingCartItemsContainer = document.querySelector(
-  '.shoppingCartItemsContainer'
-);
-
-
-function addToCartClicked(event) {
-  const button = event.target;
-  const item = button.closest('.card-body');
-
-  const itemTitle = item.querySelector('.card-title').textContent;
-  const itemPrice = item.querySelector('.card-price').textContent;
-  const itemImage = item.querySelector('.card-img').src;
-
-  addItemToShoppingCart(itemTitle, itemPrice, itemImage);
-}
-
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
     'shoppingCartItemTitle'
@@ -101,6 +17,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
       return;
     }
   }
+
   // APLICANDO EL DOM
   const shoppingCartRow = document.createElement('div');
 
@@ -175,7 +92,7 @@ function quantityChanged(event) {
 function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
-  //SWEETALERT
+//SWEETALERT
   Swal.fire(
     'Gracias Por Tu Compra',
     'Estamos Preparando Tu Pedido',
