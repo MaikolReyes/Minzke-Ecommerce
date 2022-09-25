@@ -26,8 +26,8 @@ async function renderFeaturedProducts() {
                       <h5 class="card-title">${productosDestacados.name}</h5>
                       <p class="card-price">$${productosDestacados.price}</p>
                       <p class="stock-text">Disponibles: <span>${productosDestacados.stock} </span></p>
-                      <button id="${productosDestacados.id}" class="btn btn-dark mx-0 addToCart"><i class="fa fa-shopping-cart"> </i>Agregar Al Carrito</button>
-                      </div>
+                      <button id="${productosDestacados.id}" class="item-button btn btn-dark mx-0 addToCart"><i class="fa fa-shopping-cart"> </i>Agregar Al Carrito</button>
+                  </div>
       `
     listaDestacados.append(li)
   })
@@ -46,7 +46,7 @@ async function renderAllProducts() {
                       <h5 class="card-title">${products.name}</h5>
                       <p class="card-price">$${products.price}</p>
                       <p class="stock-text">Disponibles: <span>${products.stock} </span></p>
-                      <button id= "${products.id}" class="item-button btn btn-dark addToCart"><i class="fa fa-shopping-cart"> </i>Agregar Al Carrito</button>
+                      <button id= "${products.id}" class="item-button btn btn-dark addToCart"><i class="fa fa-shopping-cart"></i>Agregar Al Carrito</button>
                   </div>
       `
     lista.append(li)
@@ -56,6 +56,7 @@ async function renderAllProducts() {
 renderFeaturedProducts();
 renderAllProducts();
 
+
 // CartShopping start
 
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
@@ -63,13 +64,13 @@ addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
 });
 
+
 const comprarButton = document.querySelector('.comprarButton');
 comprarButton.addEventListener('click', comprarButtonClicked);
 
 const shoppingCartItemsContainer = document.querySelector(
   '.shoppingCartItemsContainer'
 );
-
 
 function addToCartClicked(event) {
   const button = event.target;
@@ -86,7 +87,6 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
     'shoppingCartItemTitle'
   );
-  //OPERADOR++
   for (let i = 0; i < elementsTitle.length; i++) {
     if (elementsTitle[i].innerText === itemTitle) {
       let elementQuantity = elementsTitle[
@@ -94,16 +94,36 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
       ].parentElement.parentElement.parentElement.querySelector(
         '.shoppingCartItemQuantity'
       );
-      //OPERADOR ++
       elementQuantity.value++;
       $('.toast').toast('show');
       updateShoppingCartTotal();
       return;
     }
   }
-  // APLICANDO EL DOM
-  const shoppingCartRow = document.createElement('div');
 
+  const shoppingCartRow = document.createElement('div');
+  const shoppingCartContent = `
+  <div class="row shoppingCartItem">
+        <div class="col-6">
+            <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <img src=${itemImage} class="shopping-cart-image">
+                <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${itemTitle}</h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                <p class="item-price mb-0 shoppingCartItemPrice">${itemPrice}</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div
+                class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                    value="1">
+                <button class="btn btn-danger buttonDelete" type="button">X</button>
+            </div>
+        </div>
+    </div>`;
   shoppingCartRow.innerHTML = shoppingCartContent;
   shoppingCartItemsContainer.append(shoppingCartRow);
 
@@ -114,6 +134,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   shoppingCartRow
     .querySelector('.shoppingCartItemQuantity')
     .addEventListener('change', quantityChanged);
+
   updateShoppingCartTotal();
 }
 
@@ -128,7 +149,7 @@ function updateShoppingCartTotal() {
       '.shoppingCartItemPrice'
     );
     const shoppingCartItemPrice = Number(
-      shoppingCartItemPriceElement.textContent.replace('$', '')
+      shoppingCartItemPriceElement.textContent.replace('€', '')
     );
     const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
       '.shoppingCartItemQuantity'
@@ -138,36 +159,17 @@ function updateShoppingCartTotal() {
     );
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
   });
-  shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
+  shoppingCartTotal.innerHTML = `${total.toFixed(2)}€`;
 }
 
 function removeShoppingCartItem(event) {
   const buttonClicked = event.target;
   buttonClicked.closest('.shoppingCartItem').remove();
   updateShoppingCartTotal();
-  // LIBRERIA SWEETALERT APLICADA
-  Swal.fire({
-    title: 'Eliminar Item',
-    text: "Estas Seguro De Eliminar Este Item",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Si, Eliminar!'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire(
-        'Eliminado!',
-        'Tu Producto Ha Sido Eliminado Correctamente',
-        'success'
-      )
-    }
-  })
 }
 
 function quantityChanged(event) {
   const input = event.target;
-  //OPERADOR TERNIARIO
   input.value <= 0 ? (input.value = 1) : null;
   updateShoppingCartTotal();
 }
@@ -175,10 +177,4 @@ function quantityChanged(event) {
 function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
-  //SWEETALERT
-  Swal.fire(
-    'Gracias Por Tu Compra',
-    'Estamos Preparando Tu Pedido',
-    'success'
-  )
 }

@@ -151,33 +151,6 @@
         "type": "herramientas electricas",
         "id": 17,
         "sku": "cajaherra20"
-    },
-    {
-        "name": "Caja De Herramientas",
-        "image": "./img/caja-herramientas.png",
-        "price": 38699.00,
-        "stock": 7,
-        "type": "herramientas electricas",
-        "id": 17,
-        "sku": "cajaherra20"
-    },
-    {
-        "name": "Caja De Herramientas",
-        "image": "./img/caja-herramientas.png",
-        "price": 38699.00,
-        "stock": 7,
-        "type": "herramientas electricas",
-        "id": 17,
-        "sku": "cajaherra20"
-    },
-    {
-        "name": "Caja De Herramientas",
-        "image": "./img/caja-herramientas.png",
-        "price": 38699.00,
-        "stock": 7,
-        "type": "herramientas electricas",
-        "id": 17,
-        "sku": "cajaherra20"
     }
-    
+
 ]
