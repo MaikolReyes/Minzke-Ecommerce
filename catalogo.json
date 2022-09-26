@@ -133,24 +133,6 @@
         "type": "herramientas electricas",
         "id": 15,
         "sku": "sierr20"
-    },
-    {
-        "name": "Soldadora Inverter",
-        "image": "./img/soldadora-inverter.png",
-        "price": 32699.00,
-        "stock": 7,
-        "type": "herramientas electricas",
-        "id": 16,
-        "sku": "soldinverter20"
-    },
-    {
-        "name": "Caja De Herramientas",
-        "image": "./img/caja-herramientas.png",
-        "price": 38699.00,
-        "stock": 7,
-        "type": "herramientas electricas",
-        "id": 17,
-        "sku": "cajaherra20"
     }
 
 ]
