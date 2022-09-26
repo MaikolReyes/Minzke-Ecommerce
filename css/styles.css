@@ -120,11 +120,11 @@
   font-family: 'roboto', sans-serif;
   font-size: 1rem; }
 
-.button {
+.item-button {
   font-family: 'Rubik', sans-serif;
   font-size: 0.8rem;
   text-align: center; }
-  .button:hover {
+  .item-button:hover {
     background-color: #3bcb3b; }
 
 .card-featured {
@@ -338,11 +338,14 @@
     color: white;
     display: block; }
 
-#cart {
-  align-items: center;
-  justify-content: center;
-  align-content: center; }
-
-.container.cart {
+.shopping-cart-total {
   display: flex;
-  justify-content: space-around; }
+  justify-content: end;
+  gap: 30px;
+  font-size: 1rem;
+  font-family: 'roboto', sans-serif;
+  font-weight: 600; }
+
+.comprarButton {
+  height: 5vh;
+  width: 5vw; }

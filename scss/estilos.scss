@@ -89,13 +89,16 @@
     }
 }
 
-#cart{
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+.shopping-cart-total{
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    font-size: $text;
+    font-family: 'roboto', sans-serif;
+    font-weight: 600;
 }
 
-.container.cart{
-    display: flex;
-    justify-content: space-around;
+.comprarButton{
+height: 5vh;
+width: 5vw;
 }

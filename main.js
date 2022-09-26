@@ -169,7 +169,7 @@ function removeShoppingCartItem(event) {
   // LIBRERIA SWEETALERT APLICADA
   Swal.fire({
     title: 'Eliminar Item',
-    text: "Estas Seguro De Eliminar Este Item",
+    text: "Estas seguro de eliminar este item",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
@@ -179,7 +179,7 @@ function removeShoppingCartItem(event) {
     if (result.isConfirmed) {
       Swal.fire(
         'Eliminado!',
-        'Tu Producto Ha Sido Eliminado Correctamente',
+        'Tu producto ha sido eliminado correctamente',
         'success'
       )
       buttonClicked.closest('.shoppingCartItem').remove();
@@ -204,6 +204,7 @@ function comprarButtonClicked() {
     'Estamos Preparando Tu Pedido',
     'success'
   )
+  
 }
 
 renderFeaturedProducts();
